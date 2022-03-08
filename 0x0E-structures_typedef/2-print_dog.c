@@ -1,6 +1,13 @@
 #include "dog.h"
 #include <stdio.h>
 
+/**
+ * print_dog - entry point
+ * @d: pointer to the struct
+ *
+ * Return: Values of variables in the struct
+ */
+
 void print_dog(struct dog *d)
 {
 	if (d != NULL)
