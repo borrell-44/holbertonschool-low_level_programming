@@ -1,6 +1,23 @@
 #ifndef _HEADER_
 #define _HEADER_
 #include "dog.h"
+#include <stdlib.h>
+
+/**
+ * struct dog - main struct for project
+ * @name: Declared variable
+ * @age: Declared variable
+ * @owner: Declared variable
+ *
+ * Return: nothing
+ */
+
+struct dog
+{
+        char *name;
+        float age;
+        char *owner;
+};
 
 /**
  * init_dog - entry point
