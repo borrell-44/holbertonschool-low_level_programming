@@ -1,6 +1,6 @@
-#include "dog.h"
 #ifndef _HEADER_
 #define _HEADER_
+#include "dog.h"
 
 /**
  * init_dog - entry point
