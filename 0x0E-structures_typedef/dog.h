@@ -1,6 +1,15 @@
 #ifndef _HEADER_
 #define _HEADER_
 
+/**
+ * struct dog - main struct for project
+ * @name: Declared variable
+ * @age: Declared variable
+ * @owner: Declared variable
+ *
+ * Return: nothing
+ */
+
 struct dog
 {
 	char *name;
