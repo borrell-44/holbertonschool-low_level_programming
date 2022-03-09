@@ -1,5 +1,4 @@
 #include "function_pointers.h"
-#include <stdlib.h>
 
 /**
  * print_name - entry point
@@ -11,6 +10,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	(*f)(name);
+	f(name);
 }
 
