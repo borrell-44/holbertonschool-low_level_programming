@@ -2,7 +2,7 @@
 
 /**
 * free_listint2 - frees a list and sets the head to NULL
-* @h: the head of the list
+* @head: the head of the list
 *
 * Return: Nothing
 */
