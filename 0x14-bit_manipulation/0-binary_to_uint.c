@@ -21,6 +21,13 @@ int _pow(int times)
 	return (sum);
 }
 
+/**
+* _strlen - gets the lenght of a string
+* @string: the string from where the lenght must be found
+*
+* Return: lenght of string
+*/
+
 int _strlen(const char *string)
 {
 	int size = 0;
