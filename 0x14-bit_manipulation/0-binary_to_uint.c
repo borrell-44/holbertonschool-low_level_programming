@@ -48,13 +48,15 @@ int _strlen(const char *string)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int num = 0;
-	int i = _strlen(b) - 1;
+	int i;
 	int times = 0;
 
 	if (b == NULL)
 	{
 		return (0);
 	}
+
+	i = _strlen(b) - 1;
 
 	while (b[i] != '\0')
 	{
