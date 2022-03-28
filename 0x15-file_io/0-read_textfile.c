@@ -37,7 +37,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	for (i = 0; buf[i] != '\0'; i++)
 	{
-		_putchar(buf[i]);
+		if (_putchar(buf[i]) != 1)
+		{
+			return (0);
+		}
 		count++;
 	}
 
