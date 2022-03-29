@@ -55,14 +55,14 @@ int main(int ac, char **av)
 	close_from = close(fd_from);
 	if (close_from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", close_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_from);
 		exit(100);
 	}
 
 	close_to = close(fd_to);
 	if (close_to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", close_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_to);
 		exit(100);
 	}
 
