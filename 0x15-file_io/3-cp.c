@@ -36,7 +36,7 @@ int main(int ac, char **av)
 	}
 
 	/*Making a file and writting to it if it dosen't exist*/
-	fd_to = open(av[2], O_CREAT | O_RDWR | O_TRUNC, 0664);
+	fd_to = open(av[2], O_CREAT | O_RDWR | O_TRUNC | O_APPEND, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
@@ -58,7 +58,7 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", close_from);
 		exit(100);
 	}
-	
+
 	close_to = close(fd_to);
 	if (close_to == -1)
 	{
