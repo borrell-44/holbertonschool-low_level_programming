@@ -24,14 +24,14 @@ int main(int ac, char **av)
 	fd_from = open(av[1], O_RDONLY);
 	if (fd_from == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", av[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
 	}
 
 	fd_to = open(av[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
 	if (fd_to == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", av[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
 
@@ -40,14 +40,14 @@ int main(int ac, char **av)
 		letters = read(fd_from, buf, 1024);
 		if (letters == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", av[1]);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
 			exit(98);
 		}
 
 		written = write(fd_to, buf, letters);
 		if (written == -1)
 		{
-			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", av[2]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
 	}
