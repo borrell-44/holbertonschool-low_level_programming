@@ -28,7 +28,7 @@ int main(int ac, char **av)
 		exit(98);
 	}
 
-	fd_to = open(av[2], O_RDWR | O_TRUNC | O_CREAT, 0664);
+	fd_to = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
@@ -56,14 +56,14 @@ int main(int ac, char **av)
 	close_from = close(fd_from);
 	if (close_from == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %i\n", fd_from);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_from);
 		exit(100);
 	}
 
 	close_to = close(fd_to);
 	if (close_to == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %i\n", fd_to);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd_to);
 		exit(100);
 	}
 
