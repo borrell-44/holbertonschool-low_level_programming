@@ -36,7 +36,7 @@ int main(int ac, char **av)
 	}
 
 	/*Making a file and writting to it if it dosen't exist*/
-	fd_to = open(av[2], O_CREAT | O_RDONLY | O_TRUNC | O_APPEND, 0664);
+	fd_to = open(av[2], O_CREAT | O_RDWR | O_TRUNC | O_APPEND, 0664);
 	if (fd_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
