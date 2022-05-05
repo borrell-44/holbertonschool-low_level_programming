@@ -21,12 +21,6 @@ size_t dlistint_len(const dlistint_t *h)
 		h = h->next;
 	}
 
-	/*
-	for (; h->prev != NULL; i++)
-	{
-		h = h->prev;
-	}*/
-
 	return (i);
 }
 
