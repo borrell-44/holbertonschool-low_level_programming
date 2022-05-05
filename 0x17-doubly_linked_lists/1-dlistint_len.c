@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+* dlistint_len - finds the len of a double linked list
+* @h: head of the file
+*
+* Return: lenght of list
+*/
+
 size_t dlistint_len(const dlistint_t *h)
 {
 	int i;
@@ -21,3 +28,4 @@ size_t dlistint_len(const dlistint_t *h)
 
 	return (i);
 }
+
