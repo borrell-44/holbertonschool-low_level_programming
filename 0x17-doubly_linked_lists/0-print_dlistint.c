@@ -1,5 +1,12 @@
 #include "lists.h"
 
+/**
+* print_dlistint - prints a double linked list
+* @h: head of the list
+*
+* Return: number of elements
+*/
+
 size_t print_dlistint(const dlistint_t *h)
 {
 	int i;
@@ -11,17 +18,15 @@ size_t print_dlistint(const dlistint_t *h)
 
 	for (i = 0; h->next != NULL; i++)
 	{
-		printf("%d", h->n);
+		printf("%d\n", h->n);
 		h = h->next;
 	}
-	putchar('\n');
+	printf("%d\n", h->n);
 
 	for (; h->prev != NULL; i++)
 	{
-		printf("%d", h->n);
 		h = h->prev;
 	}
-	putchar('\n');
 
 	return (i);
 }
