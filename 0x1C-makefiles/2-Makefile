@@ -1,0 +1,15 @@
+CC=gcc
+SRC=.c
+OBJ=.o
+NAME=school
+
+all: test
+
+test: ${NAME}${OBJ} main${OBJ}
+	${CC} main${OBJ} ${NAME}${OBJ} -o ${NAME}
+
+test1.o: main${SRC}
+	${CC}	-c -o main${OBJ} main${SRC}
+
+test2.o: ${NAME}${SRC}
+	${CC}	-c -o ${NAME}${OBJ} ${NAME}${SRC}
