@@ -29,6 +29,4 @@ def island_perimeter(grid):
     if wid == 0 and leg >= 1:
         wid += 1
 
-    print("leg: {}\nwid: {}".format(leg, wid))
-
     return (leg + wid) * 2
