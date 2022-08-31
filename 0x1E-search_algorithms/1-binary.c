@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 /**
-* binary_search - Searches for a value in a list using BInary search
+* binary_search - Searches for a value in a list using Binary search
 * @array: pointer to the first element of the array to search in
 * @size: number of elements in the array
 * @value: value to search for
 *
-* Return: index where value was faund or -1 if not
+* Return: index where value was faund
 */
 
 int binary_search(int *array, size_t size, int value)
