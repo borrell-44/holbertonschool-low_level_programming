@@ -2,7 +2,7 @@
 
 /**
 * linear_search - Searches for a value in a list using Linear search
-* @array: pointer to the first element of the array to search in
+* @array: pointer to the first element of the array to search
 * @size: number of elements in the array
 * @value: value to search for
 *

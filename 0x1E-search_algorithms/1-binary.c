@@ -6,7 +6,7 @@
 * @size: number of elements in the array
 * @value: value to search for
 *
-* Return: index where value was faund
+* Return: index where value was faund or -1 if not
 */
 
 int binary_search(int *array, size_t size, int value)
