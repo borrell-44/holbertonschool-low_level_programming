@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
-* interpolation_search - Searches for a value in a list using Jump search
+* interpolation_search - Searches a list using Interpolation search
 * @array: pointer to the first element of the array to search in
 * @size: number of elements in the array
 * @value: value to search for
@@ -12,20 +13,21 @@
 int interpolation_search(int *array, size_t size, int value)
 {
 	size_t high = size - 1, low = 0;
-	size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
+	size_t pos = low + (((double)(high - low) /
+	(array[high] - array[low])) * (value - array[low]));
 
 	if (array == NULL)
 	{
 		return (-1);
 	}
+
 	if (pos >= size)
 	{
 		printf("Value checked array[%ld] is out of range\n", pos);
 		return (-1);
 	}
 
-	do
-	{
+	do {
 		printf("Value checked array[%ld] = [%d]\n", pos, array[pos]);
 		if (array[pos] == value)
 		{
@@ -33,6 +35,8 @@ int interpolation_search(int *array, size_t size, int value)
 		}
 		pos++;
 	} while (pos < size);
+
+	printf("Value checked array[%ld] is out of range\n", pos);
 
 	return (-1);
 }
